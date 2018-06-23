@@ -5,14 +5,15 @@ import java.awt.*;
 
 public class GUI extends JFrame {
 
+    private JPanel drawingPanel;
 
+    public GUI(JPanel drawingPanel) {
 
-    public GUI() {
+        this.drawingPanel = drawingPanel;
+
         this.setSize(300, 300);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setVisible(true);
-
-
 
         JPanel buttonsPanel = new JPanel();
         buttonsPanel.setLayout(new FlowLayout());
@@ -20,9 +21,6 @@ public class GUI extends JFrame {
         JButton button2 = new JButton("Button2");
         buttonsPanel.add(button1);
         buttonsPanel.add(button2);
-
-        DrawingPanel drawingPanel = new DrawingPanel();
-
 
         this.setLayout(new BorderLayout());
         this.add(BorderLayout.SOUTH, buttonsPanel);
