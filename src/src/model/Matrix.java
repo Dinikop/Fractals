@@ -15,4 +15,11 @@ public class Matrix {
         this(200, 200);
     }
 
+    public int getWidth() {
+        return matrix[0].length;
+    }
+
+    public int getHeight() {
+        return matrix.length;
+    }
 }

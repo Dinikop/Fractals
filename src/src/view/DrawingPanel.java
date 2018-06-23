@@ -1,13 +1,18 @@
 package view;
 
+import model.Matrix;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class DrawingPanel extends JPanel {
 
-    public DrawingPanel() {
+    private Matrix matrix;
+
+    public DrawingPanel(Matrix matrix) {
         this.setPreferredSize(new Dimension(200, 200));
         this.setBackground(Color.BLACK);
+        this.matrix = matrix;
     }
 
     @Override
